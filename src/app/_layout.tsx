@@ -6,7 +6,7 @@ import { useEffect } from 'react';
 import "../../global.css";
 
 Sentry.init({
-  dsn: 'https://aeb43652dc7fe2d9d7bb7769ea5ebcb0@o4511178199203840.ingest.us.sentry.io/4511180204277761',
+  dsn: process.env.EXPO_PUBLIC_SENTRY_DSN,
 
   sendDefaultPii: true,
 
