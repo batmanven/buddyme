@@ -3,6 +3,7 @@ import { tokenCache } from '@clerk/expo/token-cache';
 import * as Sentry from '@sentry/react-native';
 import { Stack, useRouter, useSegments } from "expo-router";
 import { useEffect } from 'react';
+import { GestureHandlerRootView } from "react-native-gesture-handler";
 import "../../global.css";
 
 Sentry.init({
@@ -49,7 +50,9 @@ function InitialLayout() {
 function RootLayout() {
   return (
     <ClerkProvider publishableKey={publishableKey} tokenCache={tokenCache}>
-      <InitialLayout />
+      <GestureHandlerRootView className='flex-1'>
+        <InitialLayout />
+      </GestureHandlerRootView>
     </ClerkProvider>
   )
 }
