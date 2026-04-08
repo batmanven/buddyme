@@ -35,8 +35,9 @@ function InitialLayout() {
     if (!isLoaded) return;
 
     const inAuthGroup = segments[0] === '(auth)';
+    const inTabsGroup = segments[0] === '(tabs)';
 
-    if (isSignedIn && inAuthGroup) {
+    if (isSignedIn && !inTabsGroup) {
       router.replace('/(tabs)');
     } else if (!isSignedIn && !inAuthGroup) {
       router.replace('/(auth)');
