@@ -44,7 +44,9 @@
           "project": "buddyme",
           "organization": "btech-o4"
         }
-      ]
+      ],
+      "expo-sharing",
+      "expo-video"
     ],
     "experiments": {
       "typedRoutes": true,

@@ -1,6 +1,6 @@
 import { UserResource } from "@clerk/types";
 import { useEffect, useRef } from "react";
-import { STREAM_API_KEY, syncUserToStream } from "./chat-wrapper";
+import { STREAM_API_KEY, syncUserToStream } from "@/lib/stream";
 
 import { buddyMeTheme } from "@/lib/theme";
 import * as Sentry from "@sentry/react-native";
@@ -45,7 +45,7 @@ const ChatClient = ({ children, user }: { children: React.ReactNode, user: UserR
         tokenOrProvider: tokenProvider,
     })
 
-    if (!chatClient) return <LoaderScreenFull message="Loading chat..." />;
+    if (!chatClient) return <LoaderScreenFull message="Loading chats..." />;
 
     return (
         <OverlayProvider value={{ style: buddyMeTheme }}>
