@@ -12,6 +12,7 @@
   },
   "dependencies": {
     "@clerk/expo": "^3.1.8",
+    "@clerk/types": "^4.101.21",
     "@react-native-community/netinfo": "11.5.2",
     "@react-navigation/bottom-tabs": "^7.15.5",
     "@react-navigation/elements": "^2.9.10",

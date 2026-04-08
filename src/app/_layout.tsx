@@ -1,3 +1,5 @@
+import ChatWrapper from '@/components/chat/chat-wrapper';
+import { AppProvider } from '@/contexts/app-provider';
 import { ClerkProvider, useAuth } from '@clerk/expo';
 import { tokenCache } from '@clerk/expo/token-cache';
 import * as Sentry from '@sentry/react-native';
@@ -51,7 +53,11 @@ function RootLayout() {
   return (
     <ClerkProvider publishableKey={publishableKey} tokenCache={tokenCache}>
       <GestureHandlerRootView className='flex-1'>
-        <InitialLayout />
+        <ChatWrapper>
+          <AppProvider>
+            <InitialLayout />
+          </AppProvider>
+        </ChatWrapper>
       </GestureHandlerRootView>
     </ClerkProvider>
   )

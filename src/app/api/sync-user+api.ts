@@ -8,6 +8,7 @@ export async function name(request: Request) {
     const clientt = StreamChat.getInstance(API_KEY, SECRET_KEY);
     const body = await request.json()
 
+    // to sync the strem and clerk both of them
     const { userId, name, image } = body
 
     if (!userId) {
