@@ -7,7 +7,7 @@ const CustomAndroidTabBar = ({ state, descriptors, navigation }: any) => {
     return (
         <View className="absolute bottom-6 left-6 right-6">
             <View
-                className="flex-row h-16 rounded-3xl border border-white/10 overflow-hidden shadow-2xl bg-[#1A1A2E]/90"
+                className="flex-row h-16 rounded-3xl border border-white/20 overflow-hidden shadow-2xl bg-white/20"
                 style={{ elevation: 8 }}
             >
                 {state.routes.map((route: any, index: number) => {
@@ -35,10 +35,10 @@ const CustomAndroidTabBar = ({ state, descriptors, navigation }: any) => {
                             onPress={onPress}
                             className="flex-1 items-center justify-center"
                         >
-                            <View className={`p-2 rounded-2xl ${isFocused ? 'bg-primary/20' : ''}`}>
+                            <View className={`p-2.5 rounded-2xl ${isFocused ? 'bg-primary' : ''}`}>
                                 <Icon
-                                    size={24}
-                                    color={isFocused ? '#A29BFE' : '#72757E'}
+                                    size={22}
+                                    color={isFocused ? '#FFFFFF' : '#A7A9BE'}
                                     strokeWidth={isFocused ? 2.5 : 2}
                                 />
                             </View>
