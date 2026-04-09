@@ -63,7 +63,10 @@
         }
       ],
       "@sentry/react-native",
-      "expo-audio"
+      "expo-audio",
+      "@stream-io/video-react-native-sdk",
+      "@config-plugins/react-native-webrtc",
+      "expo-build-properties"
     ],
     "experiments": {
       "typedRoutes": true,

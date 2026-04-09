@@ -1,4 +1,5 @@
 import ChatWrapper from '@/components/chat/chat-wrapper';
+import VideoProvider from '@/components/video-calling/video-provider';
 import { AppProvider } from '@/contexts/app-provider';
 import { ClerkProvider, useAuth } from '@clerk/expo';
 import { tokenCache } from '@clerk/expo/token-cache';
@@ -19,9 +20,9 @@ Sentry.init({
   replaysOnErrorSampleRate: 1,
   integrations: [Sentry.mobileReplayIntegration(
     {
-      maskAllImages:false,
-      maskAllText:false,
-      maskAllVectors:false
+      maskAllImages: false,
+      maskAllText: false,
+      maskAllVectors: false
     }
   ), Sentry.feedbackIntegration()],
 });
@@ -61,9 +62,11 @@ function RootLayout() {
     <ClerkProvider publishableKey={publishableKey} tokenCache={tokenCache}>
       <GestureHandlerRootView className='flex-1'>
         <ChatWrapper>
-          <AppProvider>
-            <InitialLayout />
-          </AppProvider>
+          <VideoProvider>
+            <AppProvider>
+              <InitialLayout />
+            </AppProvider>
+          </VideoProvider>
         </ChatWrapper>
       </GestureHandlerRootView>
     </ClerkProvider>
