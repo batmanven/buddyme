@@ -54,7 +54,9 @@
         {
           "launchMode": "most-recent"
         }
-      ]
+      ],
+      "@sentry/react-native",
+      "expo-audio"
     ],
     "experiments": {
       "typedRoutes": true,
