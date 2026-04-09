@@ -17,7 +17,13 @@ Sentry.init({
 
   replaysSessionSampleRate: 0.1,
   replaysOnErrorSampleRate: 1,
-  integrations: [Sentry.mobileReplayIntegration(), Sentry.feedbackIntegration()],
+  integrations: [Sentry.mobileReplayIntegration(
+    {
+      maskAllImages:false,
+      maskAllText:false,
+      maskAllVectors:false
+    }
+  ), Sentry.feedbackIntegration()],
 });
 
 const publishableKey = process.env.EXPO_PUBLIC_CLERK_PUBLISHABLE_KEY!

@@ -1,6 +1,6 @@
+import { STREAM_API_KEY, syncUserToStream } from "@/lib/stream";
 import { UserResource } from "@clerk/types";
 import { useEffect, useRef } from "react";
-import { STREAM_API_KEY, syncUserToStream } from "@/lib/stream";
 
 import { buddyMeTheme } from "@/lib/theme";
 import * as Sentry from "@sentry/react-native";
