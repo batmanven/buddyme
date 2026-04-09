@@ -8,7 +8,8 @@
     "scheme": "buddyme",
     "userInterfaceStyle": "automatic",
     "ios": {
-      "icon": "./assets/images/icon.png"
+      "icon": "./assets/images/icon.png",
+      "bundleIdentifier": "com.priyansh230888.buddyme"
     },
     "android": {
       "adaptiveIcon": {
@@ -46,7 +47,14 @@
         }
       ],
       "expo-sharing",
-      "expo-video"
+      "expo-video",
+      "expo-dev-client",
+      [
+        "expo-dev-client",
+        {
+          "launchMode": "most-recent"
+        }
+      ]
     ],
     "experiments": {
       "typedRoutes": true,

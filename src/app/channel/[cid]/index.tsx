@@ -41,7 +41,7 @@ const ChannelScreen = () => {
             },
             headerTintColor: COLORS.text,
             headerLeft: () => (
-                <TouchableOpacity onPress={() => router.back()} className="ml-2 flex-row items-center">
+                <TouchableOpacity onPress={() => router.back()} className=" flex-row items-center">
                     <Ionicons name="arrow-back" size={24} color={COLORS.text} />
                 </TouchableOpacity>
             ),

@@ -1,12 +1,12 @@
 import { View, Text } from 'react-native'
 import React from 'react'
 
-const CallPage = () => {
+const CallScreen = () => {
   return (
     <View>
-      <Text>CallPage</Text>
+      <Text>CallScreen</Text>
     </View>
   )
 }
 
-export default CallPage
+export default CallScreen
